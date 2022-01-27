@@ -1,2 +1,2 @@
 plot(iris)
-mean(iris$Sepal.Length)
+median(iris$Sepal.Length)
