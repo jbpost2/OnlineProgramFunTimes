@@ -1,5 +1,3 @@
 # Online Program Fun Times
 
-- First bullet
-- Second bullet
-- Third bullet
+- First Topic: git & github
