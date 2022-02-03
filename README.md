@@ -1,5 +1,4 @@
 # Online Program Fun Times
 
-- First bullet
-- Second bullet
-- Third bullet
+- First Topic: Covered git and github basics
+- Second Topic: Collaborating on github
