@@ -1,0 +1,139 @@
+---
+title: "Command Line Interface (CLI) Fun"
+author: "Justin Post"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, "css/ncsu.css", "css/ncsu-fonts.css"]
+    nature:
+      beforeInit: ["js/ncsu-scale.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      in_header: "partials/header.html"
+editor_options: 
+  chunk_output_type: console
+---
+
+
+layout: true
+
+<div class="my-footer"><img src="img/logo.png" style="height: 60px;"/></div> 
+
+---
+
+```{r setup, include=FALSE,warning=FALSE,message=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  dev = "svg",
+  fig.align = "center",
+  #fig.width = 11,
+  #fig.height = 5
+  cache = FALSE
+)
+
+# define vars
+om = par("mar")
+lowtop = c(om[1],om[2],0.1,om[4])
+library(tidyverse)
+library(knitr)
+library(reticulate)
+options(dplyr.print_min = 5)
+
+```
+
+# Command Line?
+
+- Command line is a text based interface for interacting with the computer
+
+    + On Windows the default is the command prompt
+    
+    + On a Mac/Linux, Terminal, shell, or bash
+    
+- Command isn't great!  After installing Git for Windows you now have a **bash terminal**
+
+    + Windows: Type bash into the start menu
+    
+    + Mac: Search for Terminal in Launchpad
+    
+---
+
+
+# Why Bother with the CLI?
+
+- Allows for improved efficiency + repeatable processes
+
+- Batch processing of files
+
+- Automation of tasks
+
+```{r, echo = FALSE, fig.align='center', out.width = "500px"}
+knitr::include_graphics("img/cli_power.jpg")
+```
+    
+    
+---
+
+# Basic Command Line 
+    
+[Lots of commands](https://linuxcommand.org/lc3_man_page_index.php#file) you could learn:
+
+- `echo` [send output](https://linuxcommand.org/lc3_man_pages/echoh.html) to the shell
+- `ls` [list files](https://linuxcommand.org/lc3_man_pages/ls1.html)
+- `cd` or [change directory](https://linuxcommand.org/lc3_man_pages/cdh.html) (tab completion!)
+- `touch filename.ext` or [create a file](https://linuxcommand.org/lc3_man_pages/touch1.html)
+- `mkdir` or [make directory](https://linuxcommand.org/lc3_man_pages/mkdir1.html)
+- `mv` or [move file](https://linuxcommand.org/lc3_man_pages/mv1.html)
+- `cp` or [copy file](https://linuxcommand.org/lc3_man_pages/cp1.html)
+- `rm` [deletes files](https://linuxcommand.org/lc3_man_pages/rm1.html)
+- `start` to open a file
+
+Commands usually allow for flags to customize the call
+    
+<!--open terminal
+- run echo to print hello world
+- use ls to see the files, use ls -a to see everything
+- use cd to move to the OnlineProgramFunTimes folder
+- git pull
+- use mkdir to create a new directory
+- use touch to create a new file
+- start to open the file
+- set default text editor to notepad ++
+- edit the file with notepad ++
+- git status, add, commit, and push changes    
+-->    
+    
+    
+---
+
+# git from the CLI
+
+Lots of useful git commands that are faster than using GUIs
+
+- `git clone`
+
+- `git pull`
+
+- `git status`
+
+- `git add`
+
+- `git commit`
+
+- `git push`
+    
+
+---
+
+# Quick Activity
+
+- Create an R script and submit it in batch mode
+
+    + [Adding Rscript to the path](https://info201.github.io/r-intro.html) may be required
+
+
+- Lastly, there are lots of [keyboard shortcuts](https://gist.github.com/tuxfight3r/60051ac67c5f0445efee) to learn to be really good at the CLI!    
