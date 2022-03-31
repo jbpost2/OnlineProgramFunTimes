@@ -11,4 +11,4 @@
 
 ## Other Stuff
 
-- [Link to our ncsu homepage](https://statistics.sciences.ncsu.edu/graduate/online-programs/)
+- <a target = "_blank" href = "https://statistics.sciences.ncsu.edu/graduate/online-programs/">Link to our ncsu homepage</a>
