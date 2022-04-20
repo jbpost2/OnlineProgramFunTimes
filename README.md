@@ -1,7 +1,7 @@
 # Online Program Fun Times
 
 ## Spring 2022 Topics
-- Covered git and github basics
+- Git and github basics
 - Collaborating on github
 - Command Line
 - Makefiles

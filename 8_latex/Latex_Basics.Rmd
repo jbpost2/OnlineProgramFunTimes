@@ -1,0 +1,195 @@
+---
+title: "Latex Basics"
+author: "Justin Post"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, "css/ncsu.css", "css/ncsu-fonts.css"]
+    nature:
+      beforeInit: ["js/ncsu-scale.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      in_header: "partials/header.html"
+editor_options: 
+  chunk_output_type: console
+usepackage: amsmath
+---
+
+
+layout: true
+
+<div class="my-footer"><img src="img/logo.png" style="height: 60px;"/></div> 
+
+---
+
+```{r setup, include=FALSE,warning=FALSE,message=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  dev = "svg",
+  fig.align = "center",
+  #fig.width = 11,
+  #fig.height = 5
+  cache = FALSE
+)
+
+# define vars
+om = par("mar")
+lowtop = c(om[1],om[2],0.1,om[4])
+library(tidyverse)
+library(knitr)
+library(reticulate)
+options(dplyr.print_min = 5)
+
+#Control Flow: If/Then/Else
+#Iterators and Loops
+#Numpy Arrays
+#Pandas Data Frames
+#Writing Functions
+#Summarizing with Scipy and Matplotlib
+```
+
+# What is $\LaTeX$?
+
+- Typesetting tool with super professional output
+    + Plain text file (`.tex`) that is converted to output
+    + Can completely control spacing/location of everything
+
+--
+
+- Easily include:
+    + Math equations $\bar{y}=\frac{1}{n}\sum_{i=1}^{n}y_i$
+    + Sections with tables of contents
+    + Tables
+    + Figures
+    + Bibliography
+
+--
+
+- Generally, output to PDF (doc or slides) but can output to HTML or others
+
+
+---
+
+# How to get started with $\LaTeX$?
+
+Free! 
+
+- Many use [overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) to collaborate (which may cost money)
+
+--
+- Or download [MacTex or MikTex](https://www.latex-project.org/get/#tex-distributions)
+
+--
+- Can write basic tex in most Markdown languages
+    + RStudio can act as a `.tex` editor too!
+    
+--
+
+`.tex` documents have two main parts:
+- preamble
+    + Define type of document, author, title, etc.
+    + Read in packages
+    + Define macros
+- Document body
+
+---
+
+# Basic Commands First
+
+- We write math stuff a lot... All basic symbols are there for us
+
+    + `\mu` = $\mu$, `\beta` = $\beta$, `\sigma` = $\sigma$, `\Sigma` = $\Sigma$
+
+--
+
+- Subscripting and superscripting is easy, just mind your `{}`
+
+    + `\sum_{i=1}^{n} y_i` = $\sum_{i=1}^{n} y_i$
+    + `\sum_{i=1}^{n_i} y_{i_k}` = $\sum_{i=1}^{n_i} y_{i_k}$
+    
+--
+
+- Create an R Markdown doc and add some $\LaTeX$
+
+
+---
+
+# Common `.tex` Templates and Packages
+
+**Article**
+```
+\documentclass[12pt]{article} %(other options can go inside of [])
+\usepackage{amsmath, graphicx,enumerate,undertilde}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+
+\end{document}
+```
+
+
+---
+
+# Common `.tex` Templates and Packages
+
+**Beamer Slides**
+```
+\documentclass{beamer}
+\usetheme{default}
+
+\title{Beamer Template}
+\author{TeXstudio Team}
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+\begin{frame}{Frame Title}
+\end{frame}
+\end{document}
+
+```
+
+
+
+---
+
+# Macros
+
+- We write some things so often it'd be nice to have a shorthand.  Can add a macro to the preamble!
+
+```
+\newcommand{\mean}[1]{\frac{1}{n}\sum_{i=1}^{n}#1_i}
+```
+
+--
+
+- Now use it like any other command
+
+    + `$\mean{y}$` = $\frac{1}{n}\sum_{i=1}^{n}y_i$
+
+--
+
+```
+\newcommand{\mean}[2]{\frac{1}{#2}\sum_{i=1}^{#2}#1_i}
+```
+
+- Now use it like any other command
+
+    + `$\mean{y}{n}$` = $\frac{1}{n}\sum_{i=1}^{n}y_i$
+    
+--
+
+That's it!  Not too hard to get the basics down.  Most syntax is intuitive once you practice a bit :D
