@@ -1,6 +1,8 @@
 ---
 title: "Untitled"
-output: pdf_document
+author: "Justin Post"
+date: "4/20/2022"
+output: word_document
 ---
 
 ```{r setup, include=FALSE}
@@ -11,7 +13,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+$\mu$ - this is the population mean
+\(\sigma\) - another symbol
+
+
+\textbf{The sample mean is given by}
+
+\begin{equation}\label{mean}
+\bar{y}=\frac{\sum_{i=1}^{n}y_i}{n}
+\end{equation}
+
+\newpage
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code
+
+Please refer to equation \ref{mean}.
+
+chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
 summary(cars)
@@ -26,19 +44,3 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-An equation with numbering
-
-\begin{equation}
-  \label{eq:1}
-  \phi \left( x; \mu, \sigma \right) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -
-  \frac{\left(x - \mu\right)^2}{2 \sigma^2} \right)
-\end{equation}
-
-\begin{equation}
-5 = 2 + 3
-\end{equation}
-
-blah blah blah, reference equation \ref{eq:1}
-@jbpost2
- 
