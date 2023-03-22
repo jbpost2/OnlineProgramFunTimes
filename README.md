@@ -1,13 +1,13 @@
 # Online Program Fun Times
 
 ## Spring 2022 Topics
-- [Git and github basics](1_git_github/Git_Github.html)
-- [Collaborating on github](1_git_github/Collaborating_with_Git.html)
-- [Command Line](3_cli/CLI.html)
-- [Makefiles](https://github.com/jonathanmcmahon/make-for-statistics)
-- [HTML and CSS](5_html_css/HTML_CSS_Basics.html)
+- <a href ="1_git_github/Git_Github.html" target = "_blank">Git and github basics]</a>
+- <a href ="2_git_collaborate/Collaborating_with_Git.html" target = "_blank">Collaborating on github</a>
+- <a href ="3_cli/CLI.html" target = "_blank">Command Line</a>
+- <a href ="https://github.com/jonathanmcmahon/make-for-statistics" target = "_blank">Makefiles</a>
+- <a href ="5_html_css/HTML_CSS_Basics.html" target = "_blank">HTML and CSS</a>
 - Power BI
-- [Latex Basics](8_latex/Latex_Basics.html)
+- <a href ="8_latex/Latex_Basics.html" target = "_blank">Latex Basics</a>
 
 ## Other Stuff
 
